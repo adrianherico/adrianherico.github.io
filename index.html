@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="II2GmZJzyavbiNy_LxROZgqDl1V2ht2DLE8nHEG8RPQ" />
   <title>Adrian Herico | Biochemistry, Non-Profit Leader & Musician</title>
-  <meta name="description" content="Official portfolio of Adrian Herico — Biochemistry pre-med student at UT Dallas, Founder & Executive Director of Healing Measures, online educator, and musician.">
+  <meta name="description" content="Official portfolio and identity profile of Adrian Herico — Biochemistry pre-med student at UT Dallas, Founder & Executive Director of Healing Measures, online educator, and multi-instrumentalist.">
 
-  <!-- Google Knowledge Graph Schema (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -94,6 +93,7 @@
       overflow-x: hidden;
     }
 
+    /* Ambient background lighting */
     body::before {
       content: '';
       position: fixed;
@@ -223,208 +223,44 @@
       margin-bottom: 16px;
     }
 
-    /* Media Grid & Cards with Thumbnails */
-    .media-grid {
+    .lead-text strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    /* Grids */
+    .grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 16px;
     }
 
     @media (min-width: 620px) {
-      .media-grid { grid-template-columns: 1fr 1fr; }
+      .grid { grid-template-columns: 1fr 1fr; }
     }
 
-    .media-card {
+    /* Standard Initiative Cards */
+    .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 12px;
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
+      padding: 22px;
       backdrop-filter: blur(12px);
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .media-card:hover {
-      background: var(--card-hover);
-      border-color: var(--border-hover);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.6);
-    }
-
-    .thumbnail-wrapper {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background-color: #11141c;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .thumbnail-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .media-card:hover .thumbnail-wrapper img {
-      transform: scale(1.04);
-    }
-
-    .media-info {
-      padding: 18px;
       display: flex;
       flex-direction: column;
-      flex: 1;
       justify-content: space-between;
     }
 
-    .media-tag {
+    .card:hover {
+      background: var(--card-hover);
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-meta {
       font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--primary);
-      margin-bottom: 6px;
-    }
-
-    .media-card h3 {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 6px;
-      letter-spacing: -0.01em;
-    }
-
-    .media-card p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* Skills Cloud */
-    .tags-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .tag {
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: #d1d5db;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border);
-      padding: 6px 14px;
-      border-radius: 8px;
-    }
-
-    footer {
-      margin-top: 48px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      font-size: 0.8rem;
-      color: #6b7280;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    
-    <header>
-      <div class="badge-bar">
-        <span class="pill">The University of Texas at Dallas</span>
-        <span class="pill">Methodist Health System</span>
-      </div>
-      <h1>Adrian Herico</h1>
-      <p class="tagline">Biochemistry (Pre-Med) &bull; Founder of Healing Measures &bull; Music Director &amp; Online Educator</p>
-      <p class="meta-location">Richardson, Texas &mdash; United States</p>
-
-      <div class="links-bar">
-        <a class="btn btn-primary" href="https://www.linkedin.com/in/pyok" target="_blank" rel="noopener">LinkedIn Profile</a>
-        <a class="btn" href="https://www.youtube.com/@ProfPyok" target="_blank" rel="noopener">ProfPyok (YouTube)</a>
-        <a class="btn" href="https://www.youtube.com/@pyokyakult" target="_blank" rel="noopener">pyokyakult (YouTube)</a>
-      </div>
-    </header>
-
-    <!-- About Section -->
-    <section>
-      <div class="section-title">Background &amp; Mission</div>
-      <p class="lead-text">
-        Undergraduate biochemistry scholar on the pre-medical track at <strong>The University of Texas at Dallas</strong> with career aspirations toward pediatric medicine. The journey bridges empirical biochemical rigor with the compassionate, restorative dimensions of service and music.
-      </p>
-      <p class="lead-text">
-        An All-State multi-instrumentalist with over 13 years of classical performance spanning piano, guitar, and bass. Dedicated to music pedagogy having guided 24 individual students, alongside serving as liturgical pianist and accompanist for St. Joseph Catholic Church and School.
-      </p>
-    </section>
-
-    <!-- Featured Media & Series Grid with Live Thumbnails -->
-    <section>
-      <div class="section-title">Featured Playlists &amp; Media Series</div>
-      <div class="media-grid">
-
-        <!-- ProfPyok Card -->
-        <a class="media-card" href="https://www.youtube.com/@ProfPyok" target="_blank" rel="noopener">
-          <div class="thumbnail-wrapper">
-            <!-- Replace the video ID below with your actual YouTube video ID -->
-            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80" alt="Calculus and STEM Tutorials" loading="lazy" />
-          </div>
-          <div class="media-info">
-            <div>
-              <div class="media-tag">ProfPyok &bull; YouTube</div>
-              <h3>Multivariable Calculus &amp; STEM Series</h3>
-            </div>
-            <p>Step-by-step mathematical derivations, multivariable problem breakdowns, and upcoming pre-med STEM lectures.</p>
-          </div>
-        </a>
-
-        <!-- pyokyakult Card -->
-        <a class="media-card" href="https://www.youtube.com/@pyokyakult" target="_blank" rel="noopener">
-          <div class="thumbnail-wrapper">
-            <!-- Replace the video ID below with your actual YouTube video ID -->
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Music Archive and Production" loading="lazy" />
-          </div>
-          <div class="media-info">
-            <div>
-              <div class="media-tag">pyokyakult &bull; YouTube</div>
-              <h3>Studio Recordings &amp; Compositions</h3>
-            </div>
-            <p>Acoustic piano performances, multi-instrumental arrangements, and original audio production engineered in Ableton Live.</p>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- Competencies -->
-    <section>
-      <div class="section-title">Core Competencies &amp; Fields</div>
-      <div class="tags-container">
-        <span class="tag">Biochemistry</span>
-        <span class="tag">Pre-Medicine</span>
-        <span class="tag">Non-Profit Leadership</span>
-        <span class="tag">Piano Performance</span>
-        <span class="tag">Music Pedagogy</span>
-        <span class="tag">Calculus &amp; STEM Instruction</span>
-        <span class="tag">Audio Mixing &amp; Mastering</span>
-        <span class="tag">Acoustic &amp; Bass Guitar</span>
-      </div>
-    </section>
-
-    <footer>
-      <span>Adrian Herico &mdash; Entity Record Q141206306</span>
-      <span>Hosted on GitHub Pages</span>
-    </footer>
-
-  </div>
-
-</body>
-</html>
+      text-transform:
