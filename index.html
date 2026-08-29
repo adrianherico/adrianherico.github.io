@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adrian Herico | Online Educator & Musician</title>
+  <title>Adrian Herico | Biochemistry, Non-Profit Leader & Musician</title>
+  <meta name="description" content="Official portfolio and profile of Adrian Herico — Biochemistry pre-med student at UT Dallas, Founder & Director of Healing Measures, online educator, and multi-instrumentalist.">
 
-  <!-- Google Knowledge Graph Schema Markup -->
+  <!-- Google Knowledge Graph Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -20,8 +21,24 @@
     ],
     "url": "https://pyokyakult.github.io",
     "jobTitle": [
+      "Founder & Executive Director",
       "Online Educator",
-      "Musician"
+      "Music Director & Educator"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "The University of Texas at Dallas",
+      "sameAs": "https://www.utdallas.edu"
+    },
+    "worksFor": [
+      {
+        "@type": "NonprofitOrganization",
+        "name": "Healing Measures"
+      },
+      {
+        "@type": "MedicalOrganization",
+        "name": "Methodist Health System"
+      }
     ],
     "sameAs": [
       "https://www.wikidata.org/wiki/Q141206306",
@@ -30,67 +47,232 @@
       "https://www.youtube.com/@pyokyakult"
     ],
     "knowsAbout": [
+      "Biochemistry",
+      "Pre-Medical Sciences",
+      "Pediatrics",
+      "Nonprofit Leadership",
       "Calculus & STEM Education",
-      "Music Composition & Production",
       "Piano Performance",
-      "Music Pedagogy"
+      "Music Pedagogy",
+      "Audio Engineering & DAW Production"
     ]
   }
   </script>
 
   <style>
+    :root {
+      --primary: #00539B; /* UT Dallas Blue */
+      --accent: #E87500;  /* UT Dallas Orange */
+      --text: #1f2937;
+      --muted: #4b5563;
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
-      max-width: 650px;
-      margin: 50px auto;
-      padding: 0 20px;
-      color: #1a1a1a;
-      background-color: #fafafa;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 40px 20px;
     }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+
     h1 {
-      margin-bottom: 4px;
-      font-size: 2rem;
+      font-size: 2.25rem;
+      margin: 0 0 6px 0;
+      color: #111827;
+      letter-spacing: -0.02em;
     }
-    p.subtitle {
-      color: #555;
-      margin-top: 0;
+
+    .subtitle {
       font-size: 1.15rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin: 0 0 12px 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .badge {
+      background-color: #e0f2fe;
+      color: #0369a1;
+      padding: 2px 10px;
+      border-radius: 9999px;
       font-weight: 500;
+      font-size: 0.85rem;
     }
-    .bio {
-      margin: 24px 0;
-      font-size: 1rem;
-      color: #333;
+
+    section {
+      margin-bottom: 36px;
     }
+
+    h2 {
+      font-size: 1.35rem;
+      color: #111827;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    p { margin: 0 0 14px 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .card h3 {
+      margin: 0 0 6px 0;
+      font-size: 1.05rem;
+      color: #111827;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      background: #f3f4f6;
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #374151;
+    }
+
     .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
       margin-top: 20px;
     }
-    .links a {
+
+    .btn {
       display: inline-block;
-      margin-right: 16px;
-      margin-top: 8px;
-      color: #0366d6;
+      padding: 8px 16px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--primary);
       text-decoration: none;
+      border-radius: 6px;
       font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.15s ease-in-out;
     }
-    .links a:hover {
-      text-decoration: underline;
+
+    .btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
     }
   </style>
 </head>
 <body>
-  <h1>Adrian Herico</h1>
-  <p class="subtitle">Online Educator & Musician</p>
-  
-  <p class="bio">
-    Online educator breaking down advanced STEM and calculus concepts at <strong>ProfPyok</strong>, and multi-instrumentalist producer sharing original compositions, piano arrangements, and studio recordings at <strong>pyokyakult</strong>.
-  </p>
-  
-  <div class="links">
-    <a href="https://www.youtube.com/@ProfPyok" target="_blank" rel="noopener">YouTube (@ProfPyok)</a>
-    <a href="https://www.youtube.com/@pyokyakult" target="_blank" rel="noopener">YouTube (@pyokyakult)</a>
-    <a href="https://www.linkedin.com/in/pyok" target="_blank" rel="noopener">LinkedIn</a>
+
+  <div class="container">
+    <header>
+      <h1>Adrian Herico</h1>
+      <p class="subtitle">Biochemistry (Pre-Med) • Non-Profit Leadership • Music Education & Production</p>
+      <div class="meta">
+        <span>📍 Richardson, Texas</span>
+        <span class="badge">The University of Texas at Dallas</span>
+        <span class="badge">Methodist Health System</span>
+      </div>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        I am an undergraduate biochemistry major on the pre-med track at <strong>The University of Texas at Dallas</strong> with career aspirations toward pediatric medicine. My journey bridges rigorous medical sciences with the transformative, healing capacity of music.
+      </p>
+      <p>
+        As an All-State musician with over 13 years of experience across piano, guitar, and electric bass, I serve as church and school pianist/accompanist and have mentored 24 individual students in performance and original composition. Driven to merge clinical outreach and music, I founded <strong>Healing Measures</strong>, organizing student compositions and live recitals for patients and residents in medical and care facilities.
+      </p>
+      <div class="links">
+        <a class="btn" href="https://www.linkedin.com/in/pyok" target="_blank" rel="noopener">LinkedIn Profile</a>
+        <a class="btn" href="https://www.youtube.com/@ProfPyok" target="_blank" rel="noopener">ProfPyok (YouTube)</a>
+        <a class="btn" href="https://www.youtube.com/@pyokyakult" target="_blank" rel="noopener">pyokyakult (YouTube)</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Featured Initiatives & Platforms</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>ProfPyok</h3>
+          <p>Educational STEM platform delivering step-by-step multivariable calculus tutorials, with expansions into high-yield pre-med modules in Biochemistry, Organic Chemistry, and Physics.</p>
+        </div>
+        <div class="card">
+          <h3>pyokyakult</h3>
+          <p>Digital music archive featuring multi-instrumental compositions, acoustic arrangements, and clean studio audio engineered and mixed in Ableton Live.</p>
+        </div>
+        <div class="card">
+          <h3>Healing Measures</h3>
+          <p>Student-led non-profit bringing emotional expression and therapeutic musical recitals to hospitals, rehabilitation facilities, and retirement centers.</p>
+        </div>
+        <div class="card">
+          <h3>Clinical Volunteering & Music Ministry</h3>
+          <p>Dedicated clinical volunteer at Methodist Richardson Medical Center and liturgical accompanist for St. Joseph Catholic Church and School.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Core Competencies</h2>
+      <div class="skills">
+        <span class="skill-tag">Biochemistry</span>
+        <span class="skill-tag">Pre-Medicine</span>
+        <span class="skill-tag">Pedagogy & Curriculum Development</span>
+        <span class="skill-tag">Non-Profit Leadership</span>
+        <span class="skill-tag">Piano Performance</span>
+        <span class="skill-tag">Guitar & Bass</span>
+        <span class="skill-tag">Ableton Live (Mixing/Mastering)</span>
+        <span class="skill-tag">Calculus & STEM Instruction</span>
+      </div>
+    </section>
   </div>
+
 </body>
 </html>
