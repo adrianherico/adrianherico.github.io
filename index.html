@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="II2GmZJzyavbiNy_LxROZgqDl1V2ht2DLE8nHEG8RPQ" />
+<meta name="google-site-verification" content="II2GmZJzyavbiNy_LxROZgqDl1V2ht2DLE8nHEG8RPQ" />
   <title>Adrian Herico | Biochemistry, Non-Profit Leader & Musician</title>
-  <meta name="description" content="Official digital portfolio and identity profile of Adrian Herico — Biochemistry pre-med student at UT Dallas, Founder & Executive Director of Healing Measures, online educator, and multi-instrumentalist.">
+  <meta name="description" content="Official portfolio of Adrian Herico — Biochemistry pre-med student at UT Dallas, Founder & Executive Director of Healing Measures, online educator, and musician.">
 
   <!-- Google Knowledge Graph Schema (JSON-LD) -->
   <script type="application/ld+json">
@@ -60,7 +60,6 @@
   }
   </script>
 
-  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
@@ -68,10 +67,10 @@
   <style>
     :root {
       --bg: #090b10;
-      --card-bg: rgba(22, 27, 34, 0.7);
-      --card-hover: rgba(30, 38, 48, 0.85);
+      --card-bg: rgba(22, 27, 34, 0.75);
+      --card-hover: rgba(30, 38, 48, 0.95);
       --border: rgba(255, 255, 255, 0.08);
-      --border-hover: rgba(255, 255, 255, 0.18);
+      --border-hover: rgba(56, 189, 248, 0.35);
       --primary: #38bdf8;
       --accent: #818cf8;
       --text: #f3f4f6;
@@ -92,18 +91,16 @@
       flex-direction: column;
       align-items: center;
       padding: 60px 24px;
-      position: relative;
       overflow-x: hidden;
     }
 
-    /* Ambient background gradient glow */
     body::before {
       content: '';
       position: fixed;
       top: -200px;
       left: 50%;
       transform: translateX(-50%);
-      width: 700px;
+      width: 750px;
       height: 450px;
       background: radial-gradient(circle, rgba(56, 189, 248, 0.12), rgba(129, 140, 248, 0.06), transparent 70%);
       pointer-events: none;
@@ -112,15 +109,12 @@
 
     .container {
       width: 100%;
-      max-width: 780px;
+      max-width: 800px;
       position: relative;
       z-index: 1;
     }
 
-    /* Hero Header */
-    header {
-      margin-bottom: 48px;
-    }
+    header { margin-bottom: 48px; }
 
     .badge-bar {
       display: flex;
@@ -157,17 +151,15 @@
       font-size: 1.15rem;
       font-weight: 500;
       color: var(--text-muted);
-      max-width: 600px;
+      max-width: 650px;
     }
 
     .meta-location {
       font-size: 0.85rem;
       color: #6b7280;
       margin-top: 8px;
-      letter-spacing: 0.02em;
     }
 
-    /* Action Buttons */
     .links-bar {
       display: flex;
       flex-wrap: wrap;
@@ -203,15 +195,7 @@
       color: #7dd3fc;
     }
 
-    .btn-primary:hover {
-      background: rgba(56, 189, 248, 0.22);
-      border-color: rgba(56, 189, 248, 0.5);
-    }
-
-    /* Content Sections */
-    section {
-      margin-bottom: 44px;
-    }
+    section { margin-bottom: 48px; }
 
     .section-title {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -220,7 +204,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #6b7280;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -237,66 +221,88 @@
       font-size: 1rem;
       color: #d1d5db;
       margin-bottom: 16px;
-      font-weight: 400;
     }
 
-    .lead-text strong {
-      color: #ffffff;
-      font-weight: 600;
-    }
-
-    /* Interactive Cards Grid */
-    .grid {
+    /* Media Grid & Cards with Thumbnails */
+    .media-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 16px;
+      gap: 20px;
     }
 
     @media (min-width: 620px) {
-      .grid { grid-template-columns: 1fr 1fr; }
+      .media-grid { grid-template-columns: 1fr 1fr; }
     }
 
-    .card {
+    .media-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 22px;
-      backdrop-filter: blur(12px);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
       display: flex;
       flex-direction: column;
+      backdrop-filter: blur(12px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .media-card:hover {
+      background: var(--card-hover);
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.6);
+    }
+
+    .thumbnail-wrapper {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #11141c;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .thumbnail-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .media-card:hover .thumbnail-wrapper img {
+      transform: scale(1.04);
+    }
+
+    .media-info {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
       justify-content: space-between;
     }
 
-    .card:hover {
-      background: var(--card-hover);
-      border-color: var(--border-hover);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-    }
-
-    .card-meta {
+    .media-tag {
       font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--primary);
       margin-bottom: 6px;
     }
 
-    .card h3 {
+    .media-card h3 {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       letter-spacing: -0.01em;
     }
 
-    .card p {
-      font-size: 0.88rem;
+    .media-card p {
+      font-size: 0.85rem;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     /* Skills Cloud */
@@ -314,16 +320,8 @@
       border: 1px solid var(--border);
       padding: 6px 14px;
       border-radius: 8px;
-      transition: all 0.15s ease;
     }
 
-    .tag:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: var(--border-hover);
-      color: #ffffff;
-    }
-
-    /* Subtle Footer */
     footer {
       margin-top: 48px;
       padding-top: 24px;
@@ -341,7 +339,6 @@
 
   <div class="container">
     
-    <!-- Hero Header -->
     <header>
       <div class="badge-bar">
         <span class="pill">The University of Texas at Dallas</span>
@@ -369,47 +366,45 @@
       </p>
     </section>
 
-    <!-- Initiatives Grid -->
+    <!-- Featured Media & Series Grid with Live Thumbnails -->
     <section>
-      <div class="section-title">Key Initiatives &amp; Platforms</div>
-      <div class="grid">
-        
-        <div class="card">
-          <div>
-            <div class="card-meta">Non-Profit Organization</div>
-            <h3>Healing Measures</h3>
-          </div>
-          <p>Founder and Executive Director. A student-led initiative organizing original student compositions and live restorative recitals for patients across hospitals, rehabilitation centers, and care facilities.</p>
-        </div>
+      <div class="section-title">Featured Playlists &amp; Media Series</div>
+      <div class="media-grid">
 
-        <div class="card">
-          <div>
-            <div class="card-meta">STEM Education</div>
-            <h3>ProfPyok</h3>
+        <!-- ProfPyok Card -->
+        <a class="media-card" href="https://www.youtube.com/@ProfPyok" target="_blank" rel="noopener">
+          <div class="thumbnail-wrapper">
+            <!-- Replace the video ID below with your actual YouTube video ID -->
+            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80" alt="Calculus and STEM Tutorials" loading="lazy" />
           </div>
-          <p>Digital instructional platform delivering step-by-step calculus tutorials, with ongoing expansions into high-yield modules in Biochemistry, Organic Chemistry, and Physics.</p>
-        </div>
+          <div class="media-info">
+            <div>
+              <div class="media-tag">ProfPyok &bull; YouTube</div>
+              <h3>Multivariable Calculus &amp; STEM Series</h3>
+            </div>
+            <p>Step-by-step mathematical derivations, multivariable problem breakdowns, and upcoming pre-med STEM lectures.</p>
+          </div>
+        </a>
 
-        <div class="card">
-          <div>
-            <div class="card-meta">Music Archive &amp; Audio</div>
-            <h3>pyokyakult</h3>
+        <!-- pyokyakult Card -->
+        <a class="media-card" href="https://www.youtube.com/@pyokyakult" target="_blank" rel="noopener">
+          <div class="thumbnail-wrapper">
+            <!-- Replace the video ID below with your actual YouTube video ID -->
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Music Archive and Production" loading="lazy" />
           </div>
-          <p>Digital portfolio and music production archive highlighting multi-instrumental arrangements, acoustic piano works, and studio workflows engineered in Ableton Live.</p>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="card-meta">Clinical Engagement</div>
-            <h3>Healthcare &amp; Ministry</h3>
+          <div class="media-info">
+            <div>
+              <div class="media-tag">pyokyakult &bull; YouTube</div>
+              <h3>Studio Recordings &amp; Compositions</h3>
+            </div>
+            <p>Acoustic piano performances, multi-instrumental arrangements, and original audio production engineered in Ableton Live.</p>
           </div>
-          <p>Clinical volunteering at Methodist Richardson Medical Center paired with liturgical accompaniment and youth music mentorship at St. Joseph.</p>
-        </div>
+        </a>
 
       </div>
     </section>
 
-    <!-- Core Competencies -->
+    <!-- Competencies -->
     <section>
       <div class="section-title">Core Competencies &amp; Fields</div>
       <div class="tags-container">
@@ -424,7 +419,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
       <span>Adrian Herico &mdash; Entity Record Q141206306</span>
       <span>Hosted on GitHub Pages</span>
